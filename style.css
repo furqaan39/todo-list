@@ -1,0 +1,43 @@
+
+li{
+  list-style:none;
+}
+
+#item-list{
+  margin-top:1rem;
+  color:white;
+}
+
+#item-list li {
+  display:flex;
+  margin-bottom:1rem;
+  background: blue;
+  text-align:center;
+  border-radius:5px;
+}
+#item-list li span {
+  margin-top:5px;
+  flex:2;
+}
+
+#item-list li button{
+/*   flex:1; */
+}
+
+header{
+  position:sticky;
+  top:0;
+  left:0;
+  text-align:center;
+  background: #181818;
+  color:white;
+  z-index:1;
+  margin-bottom:2rem;
+}
+
+header span{
+  color:red;
+  font-size:1rem;
+  font-weight: bold;
+  font-family:helvetica, sans-serif;
+}
