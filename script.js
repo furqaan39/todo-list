@@ -39,7 +39,7 @@ function addItem(e){
   input.value="";
 }
 
-function addItemProcess(value){
+async function addItemProcess(val){
   
   //     create li
     const li = document.createElement('li');
@@ -48,7 +48,7 @@ function addItemProcess(value){
     const span = document.createElement('span');
     
 //     create textNode for span
-    const todoText = document.createTextNode(value);
+    const todoText = document.createTextNode(val);
     
 //     append textNode to span
     span.appendChild(todoText);
@@ -80,8 +80,10 @@ function addItemProcess(value){
 function removeItem(e){
   
   console.log(e.target.previousElementSibling.innerText);
-  let text = e.target.previousElementSibling.innerText;
-  localStorage.removeItem(text);
+
+  localStorage.removeItem(e.target.previousElementSibling.innerText);
+
+
   e.target.parentNode.remove();
   
 }
